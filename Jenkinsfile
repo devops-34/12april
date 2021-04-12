@@ -1,25 +1,25 @@
 pipeline {
-         agent any
-         stages {
-                 stage('One') {
-                 steps {
-                     echo 'Hi, test'
-                 }
-                 }
-                 stage('Two') {
-                 steps {
-                    sh "hostname"
-                         
-                 }
-                 }
-                 stage('three') {
-                          {
-                                sh " ls -ltr"
-                          
-                       }
-                 }
-                 
-                 
-                           
-              }
-}
+agent any 
+    stages { 
+        stage ('Build') { 
+ 
+        }
+        stage ('Test') { 
+        
+        }
+        stage ('QA') { 
+        
+        }
+        stage ('Deploy') { 
+        steps { 
+                    echo 
+                    'deploying. ' 
+                }
+        }
+        stage ('Monitor') { 
+ 
+        }
+       
+ 
+    }           
+ }

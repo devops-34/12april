@@ -11,10 +11,7 @@ agent any
         
         }
         stage ('Deploy') { 
-        steps { 
-                    echo 
-                    'deploying. ' 
-                }
+        
         }
         stage ('Monitor') { 
  

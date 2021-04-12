@@ -18,12 +18,8 @@ pipeline {
                           
                        }
                  }
-                 steps {
-                       echo "Hello"
-                        sh " uptime"
-                 }
-                 }
                  
-                           }
+                 
+                           
               }
 }

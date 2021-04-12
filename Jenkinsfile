@@ -9,19 +9,7 @@ agent any
                 sh "uptime"
             }
         }
-        stage ('Test') { 
         
-        }
-        stage ('QA') { 
-        
-        }
-        stage ('Deploy') { 
-        
-        }
-        stage ('Monitor') { 
- 
-        }
-       
  
     }           
  }

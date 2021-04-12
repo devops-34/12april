@@ -8,38 +8,22 @@ pipeline {
                  }
                  stage('Two') {
                  steps {
-                    input('Do you want to proceed?')
+                    sh "hostname"
+                         
                  }
                  }
-                 stage('Three') {
-                 when {
-                       not {
-                            branch "master"
+                 stage('three') {
+                          {
+                                sh " ls -ltr"
+                          
                        }
                  }
                  steps {
                        echo "Hello"
+                        sh " uptime"
                  }
                  }
-                 stage('Four') {
-                 parallel { 
-                            stage('Unit Test') {
-                           steps {
-                                echo "Running the unit test..."
-                           }
-                           }
-                            stage('Integration test') {
-                              agent {
-                                    docker {
-                                            reuseNode true
-                                            image 'ubuntu'
-                                           }
-                                    }
-                              steps {
-                                echo "Running the integration test..."
-                              }
-                           }
-                           }
+                 
                            }
               }
 }
